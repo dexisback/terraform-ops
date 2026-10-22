@@ -21,3 +21,9 @@ override.tf.json
 
 # Generated local practice resource
 stage.txt
+
+
+# Terraform generated files
+**/.terraform/
+*.tfstate
+*.tfstate.*
