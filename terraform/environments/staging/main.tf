@@ -34,6 +34,7 @@ output "environment_name" {
 module "marker" {
   source      = "../../modules/local-marker"
   environment = var.environment
+  filename    = "${path.root}/marker.txt"
 }
 
 output "marker_file_path" {

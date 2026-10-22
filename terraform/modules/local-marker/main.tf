@@ -1,7 +1,3 @@
-# variable "environment" {
-#   type = string
-# }
-
 variable "environment" {
   type = string
 
@@ -11,9 +7,13 @@ variable "environment" {
   }
 }
 
+variable "filename" {
+  type        = string
+  description = "Absolute path where the marker file should be written."
+}
 
 resource "local_file" "marker" {
-  filename = "${path.module}/marker.txt"
+  filename = var.filename
   content  = "Managed environment: ${var.environment}"
 }
 
